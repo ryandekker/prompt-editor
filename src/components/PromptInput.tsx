@@ -61,7 +61,20 @@ export const PromptInput: React.FC<PromptInputProps> = ({
           </div>
         ) : (
           <>
-            <h2>Input Prompt</h2>
+            <div className="input-header-left">
+              {onToggleCollapse && value.length > 0 && (
+                <button
+                  onClick={onToggleCollapse}
+                  className="btn-collapse"
+                  disabled={isLoading}
+                  title="Collapse prompt input"
+                  aria-label="Collapse prompt input"
+                >
+                  <FontAwesomeIcon icon={faChevronLeft} className="collapse-icon" />
+                </button>
+              )}
+              <h2>Input Prompt</h2>
+            </div>
             <div className="input-header-right">
               <div className="input-info">
                 <span className="char-count">
@@ -74,17 +87,6 @@ export const PromptInput: React.FC<PromptInputProps> = ({
                   </span>
                 )}
               </div>
-              {onToggleCollapse && value.length > 0 && (
-                <button
-                  onClick={onToggleCollapse}
-                  className="btn-collapse"
-                  disabled={isLoading}
-                  title="Collapse prompt input"
-                >
-                  <FontAwesomeIcon icon={faChevronLeft} />
-                  Collapse
-                </button>
-              )}
             </div>
           </>
         )}

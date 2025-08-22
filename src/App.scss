@@ -456,6 +456,37 @@ body {
   margin-bottom: 1rem;
 }
 
+.input-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-header-left .btn-collapse {
+  margin: 0;
+}
+
+/* Icon-only collapse control */
+.btn-collapse {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  color: var(--text-tertiary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-collapse:hover {
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.collapse-icon {
+  font-size: 0.9rem;
+}
+
 .input-header h2 {
   font-size: 1.25rem;
   font-weight: 600;
@@ -493,7 +524,7 @@ body {
   line-height: 1.5;
   resize: none;
   font-family: inherit;
-  background: transparent;
+  background: var(--bg-primary);
   color: var(--text-primary);
   overflow-y: auto;
 }
