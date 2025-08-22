@@ -53,7 +53,6 @@ export const ApiKeyManager: React.FC<ApiKeyManagerProps> = ({ onConfigChange, cu
     onConfigChange(config);
     setIsVisible(false);
     setIsEditMode(false);
-    alert('API key saved successfully!');
   };
 
   const handleClear = () => {
@@ -76,8 +75,7 @@ export const ApiKeyManager: React.FC<ApiKeyManagerProps> = ({ onConfigChange, cu
       {!isVisible && currentConfig ? (
         <div className="api-key-status">
           <div className="api-status-indicator">
-            <span className="api-icon">Key</span>
-            <span className="api-status-text">API Key Configured</span>
+            <span className="api-status-text">API Ready</span>
             <span className="api-model-badge">{currentConfig.model}</span>
           </div>
           {isEditMode && (

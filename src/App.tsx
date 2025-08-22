@@ -200,27 +200,6 @@ const App: React.FC = () => {
         </div>
       </main>
 
-      <footer className="app-footer">
-        <div className="footer-content">
-          <div className="footer-info">
-            <span>Built with React + OpenAI</span>
-            <span>•</span>
-            <span>Your data stays in your browser</span>
-          </div>
-          
-          <div className="footer-stats">
-            {state.segments.length > 0 && !isPromptCollapsed && (
-              <>
-                <span>{state.segments.length} segments</span>
-                <span>•</span>
-                <span>{includedSegments.length} included</span>
-                <span>•</span>
-                <span>{state.finalOutput.length.toLocaleString()} chars output</span>
-              </>
-            )}
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
